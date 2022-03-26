@@ -14,8 +14,8 @@ import cv2
 Authenticate
 Authenticates your credentials and creates a client.
 '''
-subscription_key = SUBSCRIPTION_KEY # Credential
-endpoint = END_POINT # Credential
+subscription_key = os.environ['SUBSCRIPTION_KEY'] # Credential
+endpoint = os.environ['END_POINT'] # Credential
 
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
